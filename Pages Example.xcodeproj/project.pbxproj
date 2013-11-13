@@ -14,7 +14,6 @@
 		4CE92B2E1832FC280061C322 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 4CE92B2D1832FC280061C322 /* main.m */; };
 		4CE92B321832FC280061C322 /* PEAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 4CE92B311832FC280061C322 /* PEAppDelegate.m */; };
 		4CE92B351832FC280061C322 /* Main_iPhone.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4CE92B331832FC280061C322 /* Main_iPhone.storyboard */; };
-		4CE92B381832FC280061C322 /* Main_iPad.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4CE92B361832FC280061C322 /* Main_iPad.storyboard */; };
 		4CE92B3B1832FC280061C322 /* PEViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4CE92B3A1832FC280061C322 /* PEViewController.m */; };
 		4CE92B3D1832FC280061C322 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4CE92B3C1832FC280061C322 /* Images.xcassets */; };
 		4CE92B441832FC290061C322 /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4CE92B431832FC290061C322 /* XCTest.framework */; };
@@ -22,6 +21,7 @@
 		4CE92B461832FC290061C322 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4CE92B251832FC270061C322 /* UIKit.framework */; };
 		4CE92B4E1832FC2A0061C322 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 4CE92B4C1832FC2A0061C322 /* InfoPlist.strings */; };
 		4CE92B501832FC2A0061C322 /* Pages_ExampleTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 4CE92B4F1832FC2A0061C322 /* Pages_ExampleTests.m */; };
+		4CFFDBD618333DA500CEAE8F /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = 4CFFDBD518333DA500CEAE8F /* README.md */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -46,7 +46,6 @@
 		4CE92B301832FC280061C322 /* PEAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PEAppDelegate.h; sourceTree = "<group>"; };
 		4CE92B311832FC280061C322 /* PEAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PEAppDelegate.m; sourceTree = "<group>"; };
 		4CE92B341832FC280061C322 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main_iPhone.storyboard; sourceTree = "<group>"; };
-		4CE92B371832FC280061C322 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main_iPad.storyboard; sourceTree = "<group>"; };
 		4CE92B391832FC280061C322 /* PEViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PEViewController.h; sourceTree = "<group>"; };
 		4CE92B3A1832FC280061C322 /* PEViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PEViewController.m; sourceTree = "<group>"; };
 		4CE92B3C1832FC280061C322 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
@@ -55,6 +54,7 @@
 		4CE92B4B1832FC290061C322 /* Pages ExampleTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Pages ExampleTests-Info.plist"; sourceTree = "<group>"; };
 		4CE92B4D1832FC2A0061C322 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		4CE92B4F1832FC2A0061C322 /* Pages_ExampleTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Pages_ExampleTests.m; sourceTree = "<group>"; };
+		4CFFDBD518333DA500CEAE8F /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = README.md; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -84,6 +84,7 @@
 		4CE92B151832FC270061C322 = {
 			isa = PBXGroup;
 			children = (
+				4CFFDBD518333DA500CEAE8F /* README.md */,
 				4CE92B271832FC270061C322 /* Pages Example */,
 				4CE92B491832FC290061C322 /* Pages ExampleTests */,
 				4CE92B201832FC270061C322 /* Frameworks */,
@@ -117,7 +118,6 @@
 				4CE92B301832FC280061C322 /* PEAppDelegate.h */,
 				4CE92B311832FC280061C322 /* PEAppDelegate.m */,
 				4CE92B331832FC280061C322 /* Main_iPhone.storyboard */,
-				4CE92B361832FC280061C322 /* Main_iPad.storyboard */,
 				4CE92B391832FC280061C322 /* PEViewController.h */,
 				4CE92B3A1832FC280061C322 /* PEViewController.m */,
 				4CE92B3C1832FC280061C322 /* Images.xcassets */,
@@ -232,9 +232,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				4CE92B381832FC280061C322 /* Main_iPad.storyboard in Resources */,
 				4CE92B3D1832FC280061C322 /* Images.xcassets in Resources */,
 				4CE92B351832FC280061C322 /* Main_iPhone.storyboard in Resources */,
+				4CFFDBD618333DA500CEAE8F /* README.md in Resources */,
 				4CE92B2C1832FC270061C322 /* InfoPlist.strings in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -293,14 +293,6 @@
 				4CE92B341832FC280061C322 /* Base */,
 			);
 			name = Main_iPhone.storyboard;
-			sourceTree = "<group>";
-		};
-		4CE92B361832FC280061C322 /* Main_iPad.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				4CE92B371832FC280061C322 /* Base */,
-			);
-			name = Main_iPad.storyboard;
 			sourceTree = "<group>";
 		};
 		4CE92B4C1832FC2A0061C322 /* InfoPlist.strings */ = {
@@ -397,6 +389,7 @@
 				GCC_PREFIX_HEADER = "Pages Example/Pages Example-Prefix.pch";
 				INFOPLIST_FILE = "Pages Example/Pages Example-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = 1;
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -410,6 +403,7 @@
 				GCC_PREFIX_HEADER = "Pages Example/Pages Example-Prefix.pch";
 				INFOPLIST_FILE = "Pages Example/Pages Example-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = 1;
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;
@@ -475,6 +469,7 @@
 				4CE92B551832FC2A0061C322 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		4CE92B561832FC2A0061C322 /* Build configuration list for PBXNativeTarget "Pages ExampleTests" */ = {
 			isa = XCConfigurationList;
@@ -483,6 +478,7 @@
 				4CE92B581832FC2A0061C322 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

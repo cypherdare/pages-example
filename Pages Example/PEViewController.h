@@ -8,6 +8,9 @@
 
 #import <UIKit/UIKit.h>
 
-@interface PEViewController : UIViewController
+@interface PEViewController : UIViewController <UIScrollViewDelegate>
+@property (weak, nonatomic) IBOutlet UIView *firstView; //The other three views are sized to the first view, so it is the only one that must be adjusted to fit the device's screen size. The scroll view also fits to this view's height.
+@property (weak, nonatomic) IBOutlet UIScrollView *scrollView;
+@property (weak, nonatomic) IBOutlet UIPageControl *pageControl;
 
 @end
