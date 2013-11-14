@@ -22,7 +22,10 @@
 	self.scrollView.delegate = self;
     self.usedPageControlForScrolling = NO;
     
-    //[self updateConstraintsForInterfaceOrientation:UIInterfaceOrientationPortrait];
+    CGSize windowSize = [UIApplication sharedApplication].delegate.window.bounds.size;
+    CGFloat pageControlHeight = self.pageControlHeightConstraint.constant;
+    self.firstViewHeightConstraint.constant = windowSize.height - pageControlHeight;
+    self.firstViewWidthConstraint.constant = windowSize.width;
 }
 
 - (void)didReceiveMemoryWarning
@@ -32,17 +35,7 @@
 }
 
 - (IBAction)changePageWithPageControl:(id)sender {
-    
-    self.usedPageControlForScrolling = YES;
-    CGPoint offset = self.scrollView.contentOffset;
-    offset.x = self.scrollView.contentSize.width / self.pageControl.numberOfPages * self.pageControl.currentPage;
-    [UIView animateWithDuration:.25
-                     animations:^{
-                         self.scrollView.contentOffset = offset;
-                     }
-                     completion:^(BOOL finished){
-                         self.usedPageControlForScrolling = NO;
-                     }];
+    [self setScrollViewToMatchPageControlWithDuration:0.25];
 }
 
 - (void)scrollViewDidEndDecelerating:(UIScrollView *)scrollView {
@@ -51,16 +44,32 @@
                                               (self.scrollView.contentSize.width / self.pageControl.numberOfPages));
 }
 
+-(void) setScrollViewToMatchPageControlWithDuration:(NSTimeInterval)duration {
+    self.usedPageControlForScrolling = YES;
+    CGPoint offset = self.scrollView.contentOffset;
+    offset.x = self.scrollView.contentSize.width / self.pageControl.numberOfPages * self.pageControl.currentPage;
+    [UIView animateWithDuration: duration
+                     animations:^{
+                         self.scrollView.contentOffset = offset;
+                     }
+                     completion:^(BOOL finished){
+                         self.usedPageControlForScrolling = NO;
+                     }];
+    
+}
+
 -(void) willAnimateRotationToInterfaceOrientation:(UIInterfaceOrientation)toInterfaceOrientation duration:(NSTimeInterval)duration {
     [self updateConstraintsForInterfaceOrientation:toInterfaceOrientation];
+    [self setScrollViewToMatchPageControlWithDuration:0.25];
 }
 
 -(void) willRotateToInterfaceOrientation:(UIInterfaceOrientation)toInterfaceOrientation duration:(NSTimeInterval)duration{
     [self updateConstraintsForInterfaceOrientation:toInterfaceOrientation];
+    [self setScrollViewToMatchPageControlWithDuration:0.25];
 }
 
 -(void) updateConstraintsForInterfaceOrientation:(UIInterfaceOrientation)toInterfaceOrientation {
-    CGSize windowSize = self.view.window.bounds.size;
+    CGSize windowSize = [UIApplication sharedApplication].delegate.window.bounds.size;
     CGFloat destinationHeight, destinationWidth;
     
     switch (toInterfaceOrientation){
@@ -81,6 +90,7 @@
     self.firstViewWidthConstraint.constant = destinationWidth;
     
     [self.view layoutIfNeeded];
+    
 }
 
 @end

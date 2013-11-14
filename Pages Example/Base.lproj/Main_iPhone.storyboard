@@ -42,17 +42,27 @@
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Vkn-cJ-236" userLabel="Second purple">
                                         <rect key="frame" x="320" y="0.0" width="320" height="531"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <subviews>
+                                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Bottom left corner" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EXF-cU-E4Q">
+                                                <rect key="frame" x="20" y="490" width="140" height="21"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
                                         <color key="backgroundColor" red="0.83000866225563608" green="0.49277021371066143" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                         <constraints>
-                                            <constraint firstAttribute="width" constant="320" id="02C-gN-K4c"/>
+                                            <constraint firstAttribute="bottom" secondItem="EXF-cU-E4Q" secondAttribute="bottom" constant="20" id="3bA-ya-QCL"/>
+                                            <constraint firstItem="EXF-cU-E4Q" firstAttribute="leading" secondItem="Vkn-cJ-236" secondAttribute="leading" constant="20" id="jNH-Lt-JBP"/>
                                         </constraints>
                                     </view>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="r93-hb-lB9" userLabel="Third green">
                                         <rect key="frame" x="640" y="0.0" width="320" height="531"/>
                                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                         <subviews>
-                                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7Xe-W5-rsv">
-                                                <rect key="frame" x="258" y="490" width="42" height="21"/>
+                                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Bottom right corner" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7Xe-W5-rsv">
+                                                <rect key="frame" x="149" y="490" width="151" height="21"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                 <nil key="highlightedColor"/>
@@ -60,25 +70,26 @@
                                         </subviews>
                                         <color key="backgroundColor" red="0.44371431153295826" green="1" blue="0.47479926742793466" alpha="1" colorSpace="calibratedRGB"/>
                                         <constraints>
-                                            <constraint firstAttribute="width" constant="320" id="2Km-zZ-yFV"/>
+                                            <constraint firstAttribute="bottom" secondItem="7Xe-W5-rsv" secondAttribute="bottom" constant="20" id="c8n-eL-i5O"/>
+                                            <constraint firstAttribute="trailing" secondItem="7Xe-W5-rsv" secondAttribute="trailing" constant="20" id="tTP-4o-tpS"/>
                                         </constraints>
                                     </view>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="SxN-uN-RNh" userLabel="Fourth red">
                                         <rect key="frame" x="960" y="0.0" width="320" height="531"/>
                                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                         <color key="backgroundColor" red="1" green="0.12471325848201997" blue="0.12246666168995257" alpha="1" colorSpace="calibratedRGB"/>
-                                        <constraints>
-                                            <constraint firstAttribute="width" constant="320" id="WeH-zG-7yc"/>
-                                        </constraints>
                                     </view>
                                 </subviews>
                                 <constraints>
                                     <constraint firstItem="Vkn-cJ-236" firstAttribute="leading" secondItem="mwG-Fs-5Gz" secondAttribute="trailing" id="5qN-FW-5oM"/>
                                     <constraint firstItem="r93-hb-lB9" firstAttribute="leading" secondItem="Vkn-cJ-236" secondAttribute="trailing" id="6Hs-JI-KgL"/>
+                                    <constraint firstItem="r93-hb-lB9" firstAttribute="width" secondItem="mwG-Fs-5Gz" secondAttribute="width" id="8mK-bS-YOH"/>
                                     <constraint firstAttribute="bottom" secondItem="mwG-Fs-5Gz" secondAttribute="bottom" id="DaU-hS-gU9"/>
                                     <constraint firstItem="mwG-Fs-5Gz" firstAttribute="top" secondItem="C0E-Ya-R2A" secondAttribute="top" id="KcS-2W-VH8"/>
+                                    <constraint firstItem="Vkn-cJ-236" firstAttribute="width" secondItem="mwG-Fs-5Gz" secondAttribute="width" id="Oda-Qp-UGl"/>
                                     <constraint firstItem="r93-hb-lB9" firstAttribute="top" secondItem="Vkn-cJ-236" secondAttribute="top" id="R4j-Ie-FO7"/>
                                     <constraint firstItem="mwG-Fs-5Gz" firstAttribute="top" secondItem="Vkn-cJ-236" secondAttribute="top" id="RSH-L5-Nzg"/>
+                                    <constraint firstItem="mwG-Fs-5Gz" firstAttribute="width" secondItem="SxN-uN-RNh" secondAttribute="width" id="Tfd-kC-VMT"/>
                                     <constraint firstItem="mwG-Fs-5Gz" firstAttribute="bottom" secondItem="Vkn-cJ-236" secondAttribute="bottom" id="Wby-AP-Mmx"/>
                                     <constraint firstItem="SxN-uN-RNh" firstAttribute="leading" secondItem="r93-hb-lB9" secondAttribute="trailing" id="ZDB-rM-QZx"/>
                                     <constraint firstItem="r93-hb-lB9" firstAttribute="bottom" secondItem="Vkn-cJ-236" secondAttribute="bottom" id="dRi-K2-Squ"/>
