@@ -21,6 +21,8 @@
     [super viewDidLoad];
 	self.scrollView.delegate = self;
     self.usedPageControlForScrolling = NO;
+    
+    //[self updateConstraintsForInterfaceOrientation:UIInterfaceOrientationPortrait];
 }
 
 - (void)didReceiveMemoryWarning
@@ -47,6 +49,38 @@
     if (!self.usedPageControlForScrolling)
         self.pageControl.currentPage = lround(self.scrollView.contentOffset.x /
                                               (self.scrollView.contentSize.width / self.pageControl.numberOfPages));
+}
+
+-(void) willAnimateRotationToInterfaceOrientation:(UIInterfaceOrientation)toInterfaceOrientation duration:(NSTimeInterval)duration {
+    [self updateConstraintsForInterfaceOrientation:toInterfaceOrientation];
+}
+
+-(void) willRotateToInterfaceOrientation:(UIInterfaceOrientation)toInterfaceOrientation duration:(NSTimeInterval)duration{
+    [self updateConstraintsForInterfaceOrientation:toInterfaceOrientation];
+}
+
+-(void) updateConstraintsForInterfaceOrientation:(UIInterfaceOrientation)toInterfaceOrientation {
+    CGSize windowSize = self.view.window.bounds.size;
+    CGFloat destinationHeight, destinationWidth;
+    
+    switch (toInterfaceOrientation){
+        case UIInterfaceOrientationPortrait:
+        case UIInterfaceOrientationPortraitUpsideDown:
+            destinationHeight = MAX(windowSize.height, windowSize.width);
+            destinationWidth = MIN(windowSize.height, windowSize.width);
+            break;
+        default:
+            destinationHeight = MIN(windowSize.height, windowSize.width);
+            destinationWidth = MAX(windowSize.height, windowSize.width);
+            break;
+    }
+    
+    CGFloat pageControlHeight = self.pageControlHeightConstraint.constant;
+    
+    self.firstViewHeightConstraint.constant = destinationHeight - pageControlHeight;
+    self.firstViewWidthConstraint.constant = destinationWidth;
+    
+    [self.view layoutIfNeeded];
 }
 
 @end

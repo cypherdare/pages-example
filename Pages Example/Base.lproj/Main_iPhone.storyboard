@@ -23,7 +23,7 @@
                                     <constraint firstAttribute="height" constant="37" id="TDE-0w-LlI"/>
                                 </constraints>
                                 <connections>
-                                    <action selector="changePageWithPageControl:" destination="vXZ-lx-hvc" eventType="valueChanged" id="GzP-YI-qFA"/>
+                                    <action selector="changePageWithPageControl:" destination="vXZ-lx-hvc" eventType="valueChanged" id="xZw-ae-X5g"/>
                                 </connections>
                             </pageControl>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" pagingEnabled="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" translatesAutoresizingMaskIntoConstraints="NO" id="C0E-Ya-R2A">
@@ -50,6 +50,14 @@
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="r93-hb-lB9" userLabel="Third green">
                                         <rect key="frame" x="640" y="0.0" width="320" height="531"/>
                                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                        <subviews>
+                                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7Xe-W5-rsv">
+                                                <rect key="frame" x="258" y="490" width="42" height="21"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
                                         <color key="backgroundColor" red="0.44371431153295826" green="1" blue="0.47479926742793466" alpha="1" colorSpace="calibratedRGB"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="320" id="2Km-zZ-yFV"/>
@@ -95,7 +103,10 @@
                     <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
                     <connections>
                         <outlet property="firstView" destination="mwG-Fs-5Gz" id="OhZ-71-zbo"/>
+                        <outlet property="firstViewHeightConstraint" destination="FDd-f6-LlD" id="i7m-HK-snB"/>
+                        <outlet property="firstViewWidthConstraint" destination="FNm-wQ-gv5" id="1NQ-uF-ycc"/>
                         <outlet property="pageControl" destination="g1i-1n-RaL" id="fuo-7R-E8K"/>
+                        <outlet property="pageControlHeightConstraint" destination="TDE-0w-LlI" id="U0O-zy-MHi"/>
                         <outlet property="scrollView" destination="C0E-Ya-R2A" id="izm-w6-91E"/>
                     </connections>
                 </viewController>
